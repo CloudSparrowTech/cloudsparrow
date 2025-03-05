@@ -1,5 +1,5 @@
 import axios from "axios";
-import fileService from "./FileManager.js";
+import fileService from "./fileManager.js";
 import config from "../config/config.js";
 
 const API_URL = `${config.backendURL}/api/documents`;
