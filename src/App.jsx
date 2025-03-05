@@ -18,7 +18,7 @@ import Signup from "./components/Auth/Register/Signup";
 import UpdateUser from "./components/Auth/Update/UpdateUser";
 import ForgotPassword from "./components/Auth/Recover/ForgotPassword";
 import Dashboard from "./components/Admin/Dashboard";
-import DocumentDashBoard from "./components/Admin/DocumentDashBoard/DocumentDashboard.jsx";
+import DocumentDashBoard from "./components/Admin/DocumentDashBoard/DocumentDashboard";
 import EnquiryDash from "./components/Admin/EnquiryDash";
 import JobDash from "./components/Admin/JobDashBoard/JobDash";
 import UsersDash from "./components/Admin/UsersDash";
@@ -30,9 +30,10 @@ import UpdatePassword from "./components/Auth/Recover/UpdatePassword";
 import NotFound from "./components/Error/NotFound";
 import NotFoundAdmin from "./components/Error/NotFoundAdmin";
 import Team from "./components/Team/Team";
-import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/testimonialsDashboard.jsx";
+import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/TestimonialsDashboard";
 import DocumentEditor from "./components/Documents/DocumentEditor";
 import Main from "./components/Customer/Main";
+
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
