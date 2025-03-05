@@ -34,6 +34,7 @@ import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/test
 import DocumentEditor from "./components/Documents/DocumentEditor";
 import Main from "./components/Customer/Main";
 
+
 function App() {
   const [isVisible, setIsVisible] = useState(false);
   const [isLoading, setIsLoading] = useState(true); // Loader state
