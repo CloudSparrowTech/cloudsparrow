@@ -6,13 +6,13 @@ const API_URL = `${config.backendURL}/api/enquiries`;
 class Enquiry {
   async createEnquiry({ name, email, phone, services, description }) {
     try {
-      const response = await axios.post(
-        `${API_URL}/`,
-        { name, email, phone, services, description },
-        {
-          headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
-        }
-      );
+      const response = await axios.post(`${API_URL}/`, {
+        name,
+        email,
+        phone,
+        services,
+        description,
+      });
       return response.data;
     } catch (error) {
       throw error.response?.data || error;
