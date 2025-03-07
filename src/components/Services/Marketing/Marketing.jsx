@@ -24,7 +24,7 @@ const approachData = [
   },
 ];
 
-const ITServices = () => {
+const Marketing = () => {
   return (
     <div className="min-h-screen">
       <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
@@ -103,4 +103,4 @@ const ApproachCard = ({ data }) => {
   );
 };
 
-export default ITServices;
+export default Marketing;
