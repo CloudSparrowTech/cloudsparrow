@@ -36,7 +36,7 @@ import UpdatePassword from "./components/Auth/Recover/UpdatePassword";
 import NotFound from "./components/Error/NotFound";
 import NotFoundAdmin from "./components/Error/NotFoundAdmin";
 import Team from "./components/Team/Team";
-import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/testimonialsDashboard";
+import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/TestimonialsDashboard";
 import DocumentEditor from "./components/Documents/DocumentEditor";
 import Main from "./components/Customer/Main";
 
