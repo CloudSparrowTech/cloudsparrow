@@ -99,7 +99,7 @@ const FundingQuotationEditor = () => {
       {/* Required Documentation Section */}
       <div className="mb-6">
         <h2 className="text-lg font-semibold mb-2">Required Documentation</h2>
-        {data.map((doc, index) => (
+        {data.documents.map((doc, index) => (
           <div key={index} className="flex items-center space-x-2 mb-2">
             <input
               type="checkbox"

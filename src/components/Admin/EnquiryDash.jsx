@@ -54,7 +54,7 @@ const EnquiryDash = () => {
   const handleSaveChanges = async () => {
     try {
       const response = await enquiryService.updateEnquiry({
-        id: currentItem.$id,
+        id: currentItem._id,
         ...updatedData,
       });
       if (response) {
@@ -92,7 +92,7 @@ const EnquiryDash = () => {
       <div className="flex flex-wrap justify-between gap-4">
         {enquiries.map((item) => (
           <div
-            key={item.$id}
+            key={item._id}
             className="bg-white p-6 rounded-lg shadow-lg w-96"
           >
             <h2 className="text-2xl font-semibold text-[#1F252B] mb-4">
@@ -120,7 +120,7 @@ const EnquiryDash = () => {
                 Update
               </button>
               <button
-                onClick={() => handleDelete(item.$id)}
+                onClick={() => handleDelete(item._id)}
                 className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition duration-300"
               >
                 Delete

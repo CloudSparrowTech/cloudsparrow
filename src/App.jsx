@@ -9,6 +9,12 @@ import Careers from "./components/Careers/Careers";
 import Navbar from "./components/Common/Navbar";
 import Contact from "./components/Contact/Contact";
 import Services from "./components/Services/Services";
+import Grants from "./components/Services/Funding/Grants";
+import Loans from "./components/Services/Funding/Loans";
+import NBFC from "./components/Services/Funding/NBFC";
+import Certification from "./components/Services/Certification/Certification";
+import ITServices from "./components/Services/ITServices/ITServices";
+import Legal from "./components/Services/Legal/Legal";
 import TermsAndConditions from "./components/T&C/TermsAndConditions";
 import About from "./components/About/About";
 import Portfolio from "./components/Portfolio/Portfolio";
@@ -30,10 +36,9 @@ import UpdatePassword from "./components/Auth/Recover/UpdatePassword";
 import NotFound from "./components/Error/NotFound";
 import NotFoundAdmin from "./components/Error/NotFoundAdmin";
 import Team from "./components/Team/Team";
-import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/TestimonialsDashboard";
+import TestimonialsDashboard from "./components/Admin/TestimonialsDashboard/testimonialsDashboard";
 import DocumentEditor from "./components/Documents/DocumentEditor";
 import Main from "./components/Customer/Main";
-
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -84,6 +89,12 @@ function App() {
             <Route path="test" element={<Test />} />{" "}
             {/* Optional: Keep Test as a route */}
             <Route path="services" element={<Services />} />
+            <Route path="grants" element={<Grants />} />
+            <Route path="loans" element={<Loans />} />
+            <Route path="nbfc" element={<NBFC />} />
+            <Route path="certifications" element={<Certification />} />
+            <Route path="legal" element={<Legal />} />
+            <Route path="itservices" element={<ITServices />} />
             <Route path="portfolio" element={<Portfolio />} />
             <Route path="careers" element={<Careers />} />
             <Route path="team" element={<Team />} />
