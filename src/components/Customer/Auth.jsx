@@ -24,7 +24,6 @@ const Auth = ({ setIsLogin }) => {
         setIsLogin(true);
       }
     } catch (err) {
-      console.log(err);
       toast("invalid otp!!!!");
     }
   };

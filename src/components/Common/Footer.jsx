@@ -153,33 +153,15 @@ const Footer = ({ scrollToTop }) => {
           transition={{ duration: 0.6, delay: 1.4 }}
           viewport={{ once: true }}
         >
-          {[
-            { to: "/", label: "HOME" },
-            { to: "/about", label: "ABOUT" },
-            { to: "/services", label: "SERVICES" },
-            { to: "/portfolio", label: "PORTFOLIO" },
-            { to: "/careers", label: "CAREERS" },
-            { to: "/contact", label: "CONTACT" },
-            { to: "/team", label: "TEAM" },
-            { to: "/termsandconditions", label: "PRIVACYPOLICY/T&Cs" },
-          ].map((link, index) => (
-            <motion.div
-              key={link.label}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, delay: 1.4 + index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Link
-                onClick={scrollToTop}
-                className="cursor-pointer hover:text-gray-400"
-                to={link.to}
-              >
-                {link.label}
-              </Link>
-            </motion.div>
-          ))}
+          <Link
+            onClick={scrollToTop}
+            className="cursor-pointer hover:text-gray-400"
+            to="/termsandconditions"
+          >
+            PRIVACYPOLICY AND TERM&CONDITIONS
+          </Link>
         </motion.div>
+
         <div className="hidden lg:block w-full border-dotted bg-gradient-to-r h-[1px] from-[#55555500] via-gray-600 to-[#55555500]" />
         <motion.div
           className="h-full flex items-center justify-center"
