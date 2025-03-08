@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Overlay from "../../Contact/Overlay";
 
 const insightData = [
   {
@@ -47,8 +48,17 @@ const approachData = [
 ];
 
 const NBFC = () => {
+  const [showOverlay, setShowOverlay] = useState(false);
+
   return (
     <div className="min-h-screen">
+      {showOverlay && (
+        <Overlay
+          service={"NBFC"}
+          description={"NBFC"}
+          setShowOverlay={setShowOverlay}
+        />
+      )}
       <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
         <div className="flex-6 text-white text-center lg:text-left flex justify-center items-center">
           <div className="lg:w-[70%] px-6 flex flex-col items-center lg:items-start gap-4">
@@ -59,7 +69,10 @@ const NBFC = () => {
               of MSMEs and startups.
             </p>
             <p>Ready to expand your business? Let's get started today!</p>
-            <button className="px-8 py-4 rounded-lg bg-blue-900 w-fit cursor-pointer">
+            <button
+              onClick={() => setShowOverlay(true)}
+              className="px-8 py-4 rounded-lg bg-blue-900 w-fit cursor-pointer"
+            >
               Apply Now
             </button>
           </div>
@@ -92,7 +105,10 @@ const NBFC = () => {
         <h1 className="text-xl max-w-3xl lg:text-5xl font-medium">
           Empower Your Business with the Right Financial Support!
         </h1>
-        <button className="bg-blue-900 text-white w-fit font-medium px-6 lg:px-8 py-2 lg:py-4 rounded-lg">
+        <button
+          onClick={() => setShowOverlay(true)}
+          className="bg-blue-900 text-white w-fit font-medium px-6 lg:px-8 py-2 lg:py-4 rounded-lg"
+        >
           Discover How!
         </button>
       </div>

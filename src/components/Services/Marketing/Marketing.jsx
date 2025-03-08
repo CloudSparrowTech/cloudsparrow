@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Overlay from "../../Contact/Overlay";
 import { SERVICES } from "../../../utils/dummyData";
 
 const approachData = [
@@ -24,7 +25,7 @@ const approachData = [
   },
 ];
 
-const Marketing = () => {
+const ITServices = () => {
   return (
     <div className="min-h-screen">
       <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
@@ -65,11 +66,19 @@ const Marketing = () => {
 };
 
 const ServiceCard = ({ data }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
   return (
     <div
       style={{ backgroundColor: data.bgcolor, color: data.color }}
       className="flex flex-col min-h-80 justify-between pt-6 overflow-hidden rounded-lg shadow-lg"
     >
+      {showOverlay && (
+        <Overlay
+          service={data.title}
+          description={data.content}
+          setShowOverlay={setShowOverlay}
+        />
+      )}
       <div className="flex-3 px-4 pb-2">
         <div className="font-bold">
           <h3 className="text-lg">Un-Put-Downable</h3>
@@ -86,7 +95,10 @@ const ServiceCard = ({ data }) => {
           </ul>
         </div>
       </div>
-      <button className="py-2 px-8 bg-blue-700 border border-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-b-lg text-center cursor-pointer">
+      <button
+        onClick={() => setShowOverlay(true)}
+        className="py-2 px-8 bg-blue-700 border border-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-b-lg text-center cursor-pointer"
+      >
         Get Consultation
       </button>
     </div>
@@ -104,4 +116,4 @@ const ApproachCard = ({ data }) => {
   );
 };
 
-export default Marketing;
+export default ITServices;

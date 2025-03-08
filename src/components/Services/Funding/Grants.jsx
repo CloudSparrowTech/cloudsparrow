@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Overlay from "../../Contact/Overlay";
 
 const grantsData = [
   {
@@ -109,8 +110,16 @@ const Grants = () => {
 };
 
 const Card = ({ data }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
   return (
     <div className="flex flex-col min-h-80 justify-between bg-gradient-to-b from-white to-violet-50 pt-6 overflow-hidden rounded-lg shadow-lg">
+      {showOverlay && (
+        <Overlay
+          service={data.name}
+          description={data.description}
+          setShowOverlay={setShowOverlay}
+        />
+      )}
       <div className="flex-3 px-4">
         <div className="text-orange-400 font-bold">
           <h3 className="text-2xl">UP TO</h3>
@@ -121,7 +130,10 @@ const Card = ({ data }) => {
           <p className="text-gray-700">{data.description}</p>
         </div>
       </div>
-      <button className="py-2 px-8 bg-blue-700 border border-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-b-lg text-center cursor-pointer">
+      <button
+        onClick={() => setShowOverlay(true)}
+        className="py-2 px-8 bg-blue-700 border border-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-b-lg text-center cursor-pointer"
+      >
         Get Consultation
       </button>
     </div>

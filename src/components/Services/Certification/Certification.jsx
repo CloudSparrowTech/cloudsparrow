@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Overlay from "../../Contact/Overlay";
 
 const certificatesData = [
   {
@@ -91,11 +92,19 @@ const Certification = () => {
 };
 
 const Card = ({ bgcolor, data }) => {
+  const [showOverlay, setShowOverlay] = useState(false);
   return (
     <div
       style={{ backgroundColor: bgcolor }}
       className="flex flex-col items-center text-center justify-between gap-6 lg:gap-10 py-10 lg:py-20"
     >
+      {showOverlay && (
+        <Overlay
+          service={data.title}
+          description={data.description}
+          setShowOverlay={setShowOverlay}
+        />
+      )}
       <h1 className="text-4xl font-bold">{data.title}</h1>
       {data.description && <p>{data.description}</p>}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-10">
@@ -107,7 +116,10 @@ const Card = ({ bgcolor, data }) => {
           );
         })}
       </div>
-      <button className="bg-blue-900 text-white w-fit font-medium px-6 lg:px-8 py-2 lg:py-4 rounded-lg">
+      <button
+        onClick={() => setShowOverlay(!showOverlay)}
+        className="bg-blue-900 text-white w-fit font-medium px-6 lg:px-8 py-2 lg:py-4 rounded-lg"
+      >
         Get Expert Advice
       </button>
     </div>
