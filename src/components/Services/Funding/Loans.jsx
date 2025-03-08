@@ -1,5 +1,59 @@
 import React from "react";
 
+const loansData = [
+  {
+    name: "Startup India Seed Fund Scheme (SISFS)",
+    funding_amount: "₹50 LAKH",
+    description:
+      "Supports loans at a low interest rate of 6.5% and a 12 month moratorium period.",
+  },
+  {
+    name: "Financial Assistance for SC, ST & OBC",
+    funding_amount: "₹10 L - ₹15 CR",
+    description: "Supports SC, ST, and OBC entrepreneurs across all sectors.",
+  },
+  {
+    name: "Prime Minister Mudra Yojna (PMMY)",
+    funding_amount: "₹10 LAKH",
+    description:
+      "Provides funding options with interest rates ranging from 7% to 12%.",
+  },
+  {
+    name: "Prime Minister Employment Generation Program",
+    funding_amount: "₹50 LAKH",
+    description: "PMEGP offers low-interest loans between 8% and 12%.",
+  },
+  {
+    name: "CGTMSE",
+    funding_amount: "₹5 CRORE",
+    description:
+      "Credit Guarantee Fund Trust for Micro and Small Enterprises supports small businesses by offering interest rates between 7% and 12%.",
+  },
+  {
+    name: "National Agri Infra Financing Facility (NAIFF)",
+    funding_amount: "₹2 CRORE",
+    description:
+      "Supports infrastructure development in agri-business at a 6% effective interest rate.",
+  },
+  {
+    name: "Animal Husbandry Infrastructure Development Fund (AHIDF)",
+    funding_amount: "₹50 CRORE",
+    description:
+      "Offers loans for developing modern infrastructure in the animal husbandry sector at 6% effective interest.",
+  },
+  {
+    name: "Assistance for Loan & Subsidy",
+    funding_amount: "₹30L - ₹35 L",
+    description: "Support for Manufacturing MSMEs in Gujarat.",
+  },
+  {
+    name: "Prime Minister Micro Food Processing Enterprises (PMFME)",
+    funding_amount: "Subsidy 35%",
+    description:
+      "Boosts micro food processing sector with Credit-linked capital subsidy of 35%.",
+  },
+];
+
 const Loans = () => {
   return (
     <div className="min-h-screen">
@@ -35,192 +89,10 @@ const Loans = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col lg:flex-row lg:h-[150vh] px-4 lg:px-20 py-10">
-        <div className="hidden lg:flex flex-col w-full gap-6">
-          {[1, 2, 3, 4].map((card) => {
-            return <Card key={card} />;
-          })}
-        </div>
-        <div className="lg:max-w-3xl mt-4 overflow-y-scroll no-scrollbar lg:px-10 mx-auto">
-          <h1 className="text-3xl font-bold text-blue-800">
-            What Are Government Business Loans?
-          </h1>
-          <div className="text-gray-600 pt-5 text-lg">
-            <p>
-              Government Business Loans are financial assistance programs
-              provided by the Indian government to support entrepreneurs, MSMEs,
-              and startups. These subsidized government loans help businesses
-              access capital without the heavy repayment burdens, allowing them
-              to grow without financial strain.
-            </p>
-            <p className="my-4">
-              Unlike private loans, Government Loan Schemes offer:
-            </p>
-            <ol className="list-disc px-8">
-              <li>Lower Interest Rates: Reduced financial pressure.</li>
-              <li>Longer Repayment Periods: Flexible EMIs for businesses.</li>
-              <li>
-                Collateral-Free Options: Many schemes don’t require security.
-              </li>
-              <li>
-                Subsidized Loan Programs: Special loans for MSMEs and startups.
-              </li>
-            </ol>
-            <p className="my-4">
-              Boost your business with MSME Government Loans today!
-            </p>
-          </div>
-          <h1 className="text-3xl font-bold text-blue-800">
-            What Are Government Business Loans?
-          </h1>
-          <div className="text-gray-600 pt-5 text-lg">
-            <p>
-              Government Business Loans are financial assistance programs
-              provided by the Indian government to support entrepreneurs, MSMEs,
-              and startups. These subsidized government loans help businesses
-              access capital without the heavy repayment burdens, allowing them
-              to grow without financial strain.
-            </p>
-            <p className="my-4">
-              Unlike private loans, Government Loan Schemes offer:
-            </p>
-            <ol className="list-disc px-8">
-              <li>Lower Interest Rates: Reduced financial pressure.</li>
-              <li>Longer Repayment Periods: Flexible EMIs for businesses.</li>
-              <li>
-                Collateral-Free Options: Many schemes don’t require security.
-              </li>
-              <li>
-                Subsidized Loan Programs: Special loans for MSMEs and startups.
-              </li>
-            </ol>
-            <p className="my-4">
-              Boost your business with MSME Government Loans today!
-            </p>
-          </div>
-          <h1 className="text-3xl font-bold text-blue-800">
-            What Are Government Business Loans?
-          </h1>
-          <div className="text-gray-600 pt-5 text-lg">
-            <p>
-              Government Business Loans are financial assistance programs
-              provided by the Indian government to support entrepreneurs, MSMEs,
-              and startups. These subsidized government loans help businesses
-              access capital without the heavy repayment burdens, allowing them
-              to grow without financial strain.
-            </p>
-            <p className="my-4">
-              Unlike private loans, Government Loan Schemes offer:
-            </p>
-            <ol className="list-disc px-8">
-              <li>Lower Interest Rates: Reduced financial pressure.</li>
-              <li>Longer Repayment Periods: Flexible EMIs for businesses.</li>
-              <li>
-                Collateral-Free Options: Many schemes don’t require security.
-              </li>
-              <li>
-                Subsidized Loan Programs: Special loans for MSMEs and startups.
-              </li>
-            </ol>
-            <p className="my-4">
-              Boost your business with MSME Government Loans today!
-            </p>
-          </div>
-          <h1 className="text-3xl font-bold text-blue-800">
-            What Are Government Business Loans?
-          </h1>
-          <div className="text-gray-600 pt-5 text-lg">
-            <p>
-              Government Business Loans are financial assistance programs
-              provided by the Indian government to support entrepreneurs, MSMEs,
-              and startups. These subsidized government loans help businesses
-              access capital without the heavy repayment burdens, allowing them
-              to grow without financial strain.
-            </p>
-            <p className="my-4">
-              Unlike private loans, Government Loan Schemes offer:
-            </p>
-            <ol className="list-disc px-8">
-              <li>Lower Interest Rates: Reduced financial pressure.</li>
-              <li>Longer Repayment Periods: Flexible EMIs for businesses.</li>
-              <li>
-                Collateral-Free Options: Many schemes don’t require security.
-              </li>
-              <li>
-                Subsidized Loan Programs: Special loans for MSMEs and startups.
-              </li>
-            </ol>
-            <p className="my-4">
-              Boost your business with MSME Government Loans today!
-            </p>
-          </div>
-          <h1 className="text-3xl font-bold text-blue-800">
-            What Are Government Business Loans?
-          </h1>
-          <div className="text-gray-600 pt-5 text-lg">
-            <p>
-              Government Business Loans are financial assistance programs
-              provided by the Indian government to support entrepreneurs, MSMEs,
-              and startups. These subsidized government loans help businesses
-              access capital without the heavy repayment burdens, allowing them
-              to grow without financial strain.
-            </p>
-            <p className="my-4">
-              Unlike private loans, Government Loan Schemes offer:
-            </p>
-            <ol className="list-disc px-8">
-              <li>Lower Interest Rates: Reduced financial pressure.</li>
-              <li>Longer Repayment Periods: Flexible EMIs for businesses.</li>
-              <li>
-                Collateral-Free Options: Many schemes don’t require security.
-              </li>
-              <li>
-                Subsidized Loan Programs: Special loans for MSMEs and startups.
-              </li>
-            </ol>
-            <p className="my-4">
-              Boost your business with MSME Government Loans today!
-            </p>
-          </div>
-          <h1 className="text-3xl font-bold text-blue-800">
-            What Are Government Business Loans?
-          </h1>
-          <div className="text-gray-600 pt-5 text-lg">
-            <p>
-              Government Business Loans are financial assistance programs
-              provided by the Indian government to support entrepreneurs, MSMEs,
-              and startups. These subsidized government loans help businesses
-              access capital without the heavy repayment burdens, allowing them
-              to grow without financial strain.
-            </p>
-            <p className="my-4">
-              Unlike private loans, Government Loan Schemes offer:
-            </p>
-            <ol className="list-disc px-8">
-              <li>Lower Interest Rates: Reduced financial pressure.</li>
-              <li>Longer Repayment Periods: Flexible EMIs for businesses.</li>
-              <li>
-                Collateral-Free Options: Many schemes don’t require security.
-              </li>
-              <li>
-                Subsidized Loan Programs: Special loans for MSMEs and startups.
-              </li>
-            </ol>
-            <p className="my-4">
-              Boost your business with MSME Government Loans today!
-            </p>
-          </div>
-        </div>
-        <div className="hidden lg:flex flex-col w-full gap-6">
-          {[1, 2, 3, 4].map((card) => {
-            return <Card key={card} />;
-          })}
-        </div>
-      </div>
-      <div className="bg-blue-100 rounded-lg px-4 lg:px-20 py-10 text-center">
-        <div className="lg:hidden mb-10 flex flex-col gap-4">
-          {[1, 2, 3, 4, 5, 6].map((card) => {
-            return <Card key={card} />;
+      <div className="bg-blue-100 rounded-lg px-4 lg:px-40 py-10 text-center">
+        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:text-left gap-4">
+          {loansData.map((data) => {
+            return <Card key={data.name} data={data} />;
           })}
         </div>
         <div className="bg-blue-950 py-10 text-white rounded-lg px-4">
@@ -242,20 +114,17 @@ const Loans = () => {
   );
 };
 
-const Card = () => {
+const Card = ({ data }) => {
   return (
-    <div className="flex flex-col min-w-full md:min-w-md lg:min-w-full min-h-40 md:min-h-56 lg:min-h-56 justify-between bg-gradient-to-b from-white to-violet-50 pt-6 overflow-hidden rounded-lg shadow-lg">
+    <div className="flex flex-col min-h-80 justify-between bg-gradient-to-b from-white to-violet-50 pt-6 overflow-hidden rounded-lg shadow-lg">
       <div className="flex-3 px-4">
         <div className="text-orange-400 font-bold">
-          <h3 className="text-lg">UP TO</h3>
-          <h1 className="text-3xl">₹20 LAKH</h1>
+          <h3 className="text-2xl">UP TO</h3>
+          <h1 className="text-5xl">{data.funding_amount}</h1>
         </div>
         <div className="my-2">
-          <h4 className="font-medium">Seed Fund</h4>
-          <p className="text-gray-700 text-xs font-medium">
-            Offers funding for DPIIT recognized startups with innovative &
-            scalable models.
-          </p>
+          <h4 className="text-xl font-medium">{data.name}</h4>
+          <p className="text-gray-700">{data.description}</p>
         </div>
       </div>
       <button className="py-2 px-8 bg-blue-700 border border-blue-700 hover:bg-white hover:text-blue-700 text-white rounded-b-lg text-center cursor-pointer">

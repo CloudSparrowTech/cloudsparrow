@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom"; // Make sure to install react-router-dom
-import { FaBars, FaTimes, FaUser, FaChevronDown } from "react-icons/fa";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom"; // Make sure to install react-router-dom
+import { FaBars, FaTimes, FaUser, FaChevronDown } from "react-icons/fa";
 import jobService from "../../backend/job";
 import authService from "../../backend/auth";
 import userService from "../../backend/user";
@@ -9,6 +9,7 @@ import teamService from "../../backend/team";
 import { setAllJobs } from "../../store/jobSlice";
 import { setTeamData } from "../../store/teamSlice";
 import { login, logout } from "../../store/authSlice";
+import { toast } from "react-toastify";
 
 const Navbar = () => {
   const dispatch = useDispatch();
