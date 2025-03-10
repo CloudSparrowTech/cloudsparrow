@@ -64,7 +64,7 @@ const Navbar = () => {
       getTeamData();
     };
     fetchData();
-  }, []);
+  }, [userData]);
 
   const navLinks = [
     { name: "Home", to: "/" },
