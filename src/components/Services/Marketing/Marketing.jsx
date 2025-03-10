@@ -38,7 +38,7 @@ const ITServices = () => {
       />
       <div className="bg-blue-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-4 md:px-16 lg:px-40">
         {SERVICES.map((service) => {
-          return <ServiceCard key={service.data.title} data={service.data} />;
+          return <ServiceCard key={service.title} data={service} />;
         })}
       </div>
       <div className="px-4 lg:px-20 py-10 lg:py-30 text-center">
