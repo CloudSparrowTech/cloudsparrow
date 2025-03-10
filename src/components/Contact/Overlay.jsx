@@ -36,8 +36,8 @@ const Overlay = ({ service, description, setShowOverlay }) => {
   };
 
   return (
-    <div className="fixed inset-0 min-h-screen py-20 px-4">
-      <div className="bg-blue-50 text-black max-w-md mx-auto py-5 rounded-lg shadow-2xl">
+    <div className="fixed flex justify-center items-center inset-0 min-h-screen px-4">
+      <div className="bg-blue-50 text-black w-md py-5 rounded-lg shadow-2xl">
         <div className="flex justify-evenly text-center items-center">
           <button></button>
           <h1 className="text-xl font-bold">Book a Consultation</h1>
