@@ -1,57 +1,50 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
+import Header from "../Common/Header";
 import { motion } from "framer-motion";
 import { useSelector } from "react-redux";
 
 const TeamComponent = () => {
+  const rolePriority = {
+    "Managing Director & Founder": 1,
+    Director: 2,
+    "Branch Manager": 3,
+    "Manager IT & Sales": 4,
+    "HR Head": 5,
+    "HR Executive": 6,
+    "IT Head": 7,
+    "Senior Developer": 8,
+    "Junior Developer": 9,
+    "Team Leader": 10,
+    "Assistant Team Leader": 11,
+    "Business Development Associate": 12,
+  };
+
   const teamMembers = useSelector((state) => {
     return state.teamSlice.teamsData;
   });
 
+  const sortedData = [...teamMembers].sort(
+    (a, b) => (rolePriority[a.role] || 99) - (rolePriority[b.role] || 99)
+  );
+
   return (
     <motion.div
-      className="px-4 py-20 lg:py-24 md:px-8 lg:px-16 xl:px-24 bg-gray-50"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <motion.div
-        className="text-center font-medium"
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-      >
-        <h5 className="text-gray-600 text-lg uppercase tracking-wide">
-          Our Team
-        </h5>
-        <h1 className="text-3xl md:text-5xl font-bold my-4">
-          Meet The
-          <motion.span
-            className="text-blue-600"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            {" CloudSparrow "}
-          </motion.span>
-          Team
-        </h1>
-        <motion.p
-          className="text-gray-600 max-w-2xl mx-auto"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          Our team is dedicated to delivering innovative solutions in digital
-          marketing, <br /> web development, and design, ensuring success for
-          businesses worldwide.
-        </motion.p>
-      </motion.div>
-
-      <div className="grid mt-10 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        {teamMembers?.map((member, memberIndex) => (
+      <Header
+        heading={"Meet The CloudSparrow Team"}
+        description={[
+          "Our team is dedicated to delivering innovative solutions in digital marketing, web development, and design, ensuring success for businesses worldwide.",
+        ]}
+        image={"/cloudsparrow-all-img/team.png"}
+      />
+      <div className="grid my-10 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 px-4 md:px-8 lg:px-16 xl:px-24 bg-gray-50">
+        {sortedData?.map((member, memberIndex) => (
           <Card
             data={member}
-            key={member._id}
+            key={member.$id}
             delay={memberIndex * 0.2 + 0.4 + memberIndex * 0.1}
           />
         ))}

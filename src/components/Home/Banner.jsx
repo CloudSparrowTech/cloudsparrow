@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 import {
   IoIosArrowDropleftCircle,
   IoIosArrowDroprightCircle,
@@ -27,12 +26,7 @@ const Banner = () => {
       {/* Main Content Section */}
       <div className="flex lg:pt-8 lg:flex-row flex-col items-center justify-center w-full lg:px-12 gap-7">
         {/* Left Section */}
-        <motion.div
-          className="lg:w-[60%] lg:pl-20"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        >
+        <div className="lg:w-[60%] lg:pl-20">
           <p className="text-white text-3xl lg:text-5xl font-bold mx-auto">
             HIGHLY BESPOKE <br /> WEBSITES AND DIGITAL <br /> EXPERIENCES FOR{" "}
             <br /> AMBITIOUS{" "}
@@ -40,7 +34,7 @@ const Banner = () => {
               BRANDS
             </span>
           </p>
-        </motion.div>
+        </div>
 
         {/* Right Section */}
         <div className="flex flex-col items-center md:items-start max-w-md text-center md:text-left">
@@ -49,16 +43,11 @@ const Banner = () => {
             src="/cloudsparrow-all-img/CallUs.png"
             alt="Call Us"
           />
-          <motion.p
-            className="text-gray-300 text-base mt-6 px-4 md:px-0"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
-          >
+          <p className="text-gray-300 text-base mt-6 px-4 md:px-0">
             Why stress over design and development? Or hire different agencies
             to do branding and marketing? We are your one-stop shop for all your
             design, development, and marketing needs.
-          </motion.p>
+          </p>
         </div>
       </div>
 
@@ -78,18 +67,12 @@ const Banner = () => {
             />
             {/* Overlay Image with Smooth Animation */}
             <div className="absolute border-2 top-2 lg:top-5 h-[70%] w-[69%] object-contain lg:rounded-2xl rounded-md overflow-hidden">
-              <AnimatePresence mode="wait">
-                <motion.img
-                  key={curr}
-                  src={data[curr]}
-                  alt="Overlay"
-                  className="size-full"
-                  initial={{ opacity: 0, x: 50 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: -50 }}
-                  transition={{ duration: 0.5, ease: "easeInOut" }}
-                />
-              </AnimatePresence>
+              <img
+                key={curr}
+                src={data[curr]}
+                alt="Overlay"
+                className="size-full"
+              />
             </div>
             <img
               className="absolute w-full h-full top-0 object-cover"

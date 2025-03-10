@@ -1,14 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import BannerFooter from "./BannerFooter";
-import HeroSection from "./HeroSection";
-import WhatWeDo from "./WhatWeDo";
-import Work from "./Work";
-import Testimonials from "./Testimonials";
-import TechStack from "./TechStack";
-import ProductCycle from "./ProductCycle";
-import Loader from "../Common/Loader";
 import Banner from "./Banner";
+import FAQ from "./FAQ";
+import Testimonials from "./Testimonials";
+import Loader from "../Common/Loader";
 import authService from "../../backend/auth";
 import { toast } from "react-toastify";
 
@@ -63,26 +58,11 @@ const HomePage = () => {
       <motion.div {...fadeInAnimation(0.2)}>
         <Banner />
       </motion.div>
-      <motion.div {...fadeInAnimation(0.4)}>
-        <BannerFooter />
-      </motion.div>
-      <motion.div {...fadeInAnimation(0.6)}>
-        <HeroSection />
-      </motion.div>
-      <motion.div {...fadeInAnimation(0.8)}>
-        <WhatWeDo />
-      </motion.div>
-      <motion.div {...fadeInAnimation(1.0)}>
-        <Work />
-      </motion.div>
       <motion.div {...fadeInAnimation(1.2)}>
         <Testimonials />
       </motion.div>
-      <motion.div {...fadeInAnimation(1.4)}>
-        <TechStack />
-      </motion.div>
       <motion.div {...fadeInAnimation(1.6)}>
-        <ProductCycle />
+        <FAQ />
       </motion.div>
     </motion.div>
   );

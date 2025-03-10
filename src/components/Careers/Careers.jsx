@@ -1,42 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
+import Header from "../Common/Header";
 import { JobPage } from "./JobPage";
 
 const Careers = () => {
   return (
     <>
-      <motion.div
-        className="bg-[url('./assets/careerimg.png')] bg-cover bg-center lg:min-h-[500px] text-white"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-      >
-        <motion.div
-          className="px-4 pt-26 pb-10 lg:px-0 lg:pt-0 lg:pb-0 lg:pl-28 lg:w-full lg:min-h-[500px] bg-gradient-to-r from-[#080808B8] via-transparent to-transparent flex flex-col items-start justify-center"
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          <motion.h1
-            className="font-bold text-3xl my-4 lg:my-0 lg:text-[74px]"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.4 }}
-          >
-            Join The Cloud-Sparrow
-          </motion.h1>
-          <motion.p
-            className="font-medium text-xs lg:text-sm"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.6 }}
-          >
-            At Cloud-Sparrow, we are on a mission to transform{" "}
-            <br className="hidden lg:block" /> how businesses leverage digital
-            marketing, web development, and design to achieve success.
-          </motion.p>
-        </motion.div>
-      </motion.div>
+      <Header
+        heading={"Join The Cloud-Sparrow"}
+        description={[
+          "At Cloud-Sparrow, we are on a mission to transform how businesses leverage digital marketing, web development, and design to achieve success.",
+        ]}
+        image={"cloudsparrow-all-img/careers.png"}
+      />
 
       <motion.div
         className="p-4 lg:p-12 flex lg:mx-20 gap-20"
@@ -47,10 +23,22 @@ const Careers = () => {
       >
         <div className="hidden lg:block w-1/2">
           <div className="w-[610px] h-[546px] flex">
-            {[ 
-              { src: "/cloudsparrow-all-img/girl1.jpeg", width: "w-1/3", extra: "" },
-              { src: "/cloudsparrow-all-img/girl2.jpeg", width: "w-1/3 h-[500px]", extra: "mx-1 mt-[40px]" },
-              { src: "/cloudsparrow-all-img/girl3.jpeg", width: "w-1/3 h-[420px]", extra: "mt-[40px]" },
+            {[
+              {
+                src: "/cloudsparrow-all-img/girl1.jpeg",
+                width: "w-1/3",
+                extra: "",
+              },
+              {
+                src: "/cloudsparrow-all-img/girl2.jpeg",
+                width: "w-1/3 h-[500px]",
+                extra: "mx-1 mt-[40px]",
+              },
+              {
+                src: "/cloudsparrow-all-img/girl3.jpeg",
+                width: "w-1/3 h-[420px]",
+                extra: "mt-[40px]",
+              },
             ].map((img, index) => (
               <motion.div
                 key={index}

@@ -4,7 +4,7 @@ import { FaPlus } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { problems } from "../../utils/dummyData";
 
-const ProductCycle = () => {
+const FAQ = () => {
   return (
     <motion.div
       className="bg-gradient-to-b from-blue-900 via-[#2A6BFD] to-[#14b4f4] relative"
@@ -13,50 +13,7 @@ const ProductCycle = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       {/* Top Section */}
-      <div className="bg-gradient-to-b from-gray-300 via-white to-white h-full rounded-b-[48px] py-4 lg:py-28 px-4 lg:px-20"> {/* Fixed rounded-b-4xl */}
-        <div className="flex flex-col items-center justify-center">
-          <motion.div
-            className="mt-4 lg:mt-6 flex flex-row items-start"
-            initial={{ opacity: 0, y: -50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <div className="lg:w-[48rem] text-left"> {/* Fixed lg:w-3xl */}
-              <div className="flex gap-4 w-full mb-4">
-                <img src="/cloudsparrow-all-img/FourthPage.png" alt="Logo" />
-                <p className="text-[12px] text-[#2A6BFD] font-bold">
-                  OUR PRODUCT DEVELOPMENT CYCLE
-                </p>
-              </div>
-              <p className="text-2xl lg:text-6xl font-bold lg:leading-16">
-                DISCOVER HOW OUR SOFTWARE HOUSE DEVELOPS HIGH-QUALITY WEB AND
-                MOBILE APPS
-              </p>
-              <motion.button
-                className="h-10 w-36 mt-4 lg:mt-7 text-sm text-white bg-[#2A6BFD] font-semibold rounded-[4px]"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.4 }}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Link to="/about">Let's Start</Link>
-              </motion.button>
-            </div>
-            <motion.div
-              className="hidden lg:block"
-              initial={{ opacity: 0, x: 50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
-            >
-              <img
-                className="h-96 w-80 object-cover"
-                src="/cloudsparrow-all-img/ninth.png"
-                alt="Illustration"
-              />
-            </motion.div>
-          </motion.div>
-        </div>
-
+      <div className="bg-gradient-to-b from-gray-300 via-white to-white h-full rounded-b-[48px] py-4 lg:py-28 px-4 lg:px-20">
         {/* FAQ Section */}
         <div>
           <motion.div
@@ -181,4 +138,4 @@ const Card = ({ text }) => {
   );
 };
 
-export default ProductCycle;
+export default FAQ;

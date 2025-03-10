@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../../Common/Header";
 import Overlay from "../../Contact/Overlay";
 
 const insightData = [
@@ -51,33 +52,18 @@ const Legal = () => {
           setShowOverlay={setShowOverlay}
         />
       )}
-      <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
-        <div className="flex-6 text-white text-center lg:text-left flex justify-center items-center">
-          <div className="lg:w-[70%] px-6 flex flex-col items-center lg:items-start gap-4">
-            <h1 className="text-3xl lg:text-5xl font-bold">
-              Legal & Compliances
-            </h1>
-            <p>
-              We provide 360° support for all legal aspects, including company
-              registration, compliance audits, and contract management.
-            </p>
-            <p>Ready to streamline your legal processes?</p>
-            <button
-              onClick={() => setShowOverlay(true)}
-              className="px-8 py-4 rounded-lg bg-blue-900 w-fit cursor-pointer"
-            >
-              Get Legal Assistance
-            </button>
-          </div>
-        </div>
-        <div className="lg:flex-4 flex justify-center items-center">
-          <img
-            className="size-44"
-            src="/cloudsparrow-all-img/legal.webp"
-            alt="legal"
-          />
-        </div>
-      </div>
+      <Header
+        heading="Legal & Compliances"
+        description={[
+          "We provide 360° support for all legal aspects, including company registration, compliance audits, and contract management.",
+          "Ready to streamline your legal processes?",
+        ]}
+        image="/cloudsparrow-all-img/legal.webp"
+        btn={{
+          title: "Get Legal Assistance",
+          action: () => setShowOverlay(true),
+        }}
+      />
       <div className="px-4 lg:px-20 py-10 lg:py-30 text-center bg-blue-100 ">
         <h1 className="text-2xl lg:text-4xl font-bold mb-4 lg:mb-10">
           The Legal & Compliance Advantages

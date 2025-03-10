@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../../Common/Header";
 import Overlay from "../../Contact/Overlay";
 
 const insightData = [
@@ -59,32 +60,15 @@ const NBFC = () => {
           setShowOverlay={setShowOverlay}
         />
       )}
-      <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
-        <div className="flex-6 text-white text-center lg:text-left flex justify-center items-center">
-          <div className="lg:w-[70%] px-6 flex flex-col items-center lg:items-start gap-4">
-            <h1 className="text-3xl lg:text-5xl font-bold">NBFC Loans</h1>
-            <p>
-              Non-Banking Financial Companies (NBFCs) offer a range of loan
-              products with flexible terms & conditions, catering to the needs
-              of MSMEs and startups.
-            </p>
-            <p>Ready to expand your business? Let's get started today!</p>
-            <button
-              onClick={() => setShowOverlay(true)}
-              className="px-8 py-4 rounded-lg bg-blue-900 w-fit cursor-pointer"
-            >
-              Apply Now
-            </button>
-          </div>
-        </div>
-        <div className="lg:flex-4 flex justify-center items-center">
-          <img
-            className="size-44"
-            src="/cloudsparrow-all-img/nbfc.webp"
-            alt="nbfc"
-          />
-        </div>
-      </div>
+      <Header
+        heading="NBFC Loans"
+        description={[
+          "Non-Banking Financial Companies (NBFCs) offer a range of loan products with flexible terms & conditions, catering to the needs of MSMEs and startups.",
+          "Ready to expand your business? Let's get started today!",
+        ]}
+        image="/cloudsparrow-all-img/nbfc.webp"
+        btn={{ title: "Apply Now", action: () => setShowOverlay(true) }}
+      />
       <div className="px-4 lg:px-20 py-10 lg:py-30 text-center bg-blue-100 ">
         <h1 className="text-4xl font-bold mb-4 lg:mb-10">Insights</h1>
         <div className="flex flex-col lg:flex-row gap-6 items-center justify-center lg:text-left">

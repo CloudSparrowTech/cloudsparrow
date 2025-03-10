@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../../Common/Header";
 import Overlay from "../../Contact/Overlay";
 import { Link } from "react-router-dom";
 
@@ -59,38 +60,15 @@ const loansData = [
 const Loans = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
-        <div className="flex-6 text-white text-center lg:text-left flex justify-center items-center">
-          <div className="lg:w-[70%] px-6 flex flex-col gap-4">
-            <h1 className="text-3xl lg:text-5xl font-bold">
-              Government Business Loans
-            </h1>
-            <p>
-              Looking for financial support to start, expand, or grow your
-              business? Government Business Loans offer easy, affordable, and
-              low-interest financing to help startups, MSMEs, and small
-              businesses scale.
-            </p>
-            <p>
-              Whether you need funds for working capital, expansion, or
-              equipment purchase, Government Loan Schemes provide flexible
-              repayment options and lower interest rates compared to traditional
-              bank loans.
-            </p>
-            <p>
-              Get affordable loans with lower interest rates & easy approval.
-              Apply today for Government Business Loans!
-            </p>
-          </div>
-        </div>
-        <div className="lg:flex-4 flex justify-center items-center">
-          <img
-            className="size-44"
-            src="/cloudsparrow-all-img/loans.webp"
-            alt="loans"
-          />
-        </div>
-      </div>
+      <Header
+        heading="Government Business Loans"
+        description={[
+          "Looking for financial support to start, expand, or grow your business? Government Business Loans offer easy, affordable, and low-interest financing to help startups, MSMEs, and small businesses scale.",
+          "Whether you need funds for working capital, expansion, or equipment purchase, Government Loan Schemes provide flexible repayment options and lower interest rates compared to traditional bank loans.",
+          "Get affordable loans with lower interest rates & easy approval. Apply today for Government Business Loans!",
+        ]}
+        image="/cloudsparrow-all-img/loans.webp"
+      />
       <div className="bg-blue-100 rounded-lg px-4 lg:px-40 py-10 text-center">
         <div className="mb-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:text-left gap-4">
           {loansData.map((data) => {

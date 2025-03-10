@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Overlay from "../../Contact/Overlay";
+import Header from "../../Common/Header";
 
 const certificatesData = [
   {
@@ -60,24 +61,13 @@ const certificatesData = [
 const Certification = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
-        <div className="flex-6 text-white text-center lg:text-left flex justify-center items-center">
-          <div className="lg:w-[70%] px-6 flex flex-col items-center lg:items-start gap-4">
-            <h1 className="text-3xl lg:text-5xl font-bold">Certifications</h1>
-            <p>
-              Unlock growth opportunities and benefits with essential
-              certifications for MSMEs and startups.
-            </p>
-          </div>
-        </div>
-        <div className="lg:flex-4 flex justify-center items-center">
-          <img
-            className="size-44"
-            src="/cloudsparrow-all-img/certificate.webp"
-            alt="certificate"
-          />
-        </div>
-      </div>
+      <Header
+        heading="Certifications"
+        description={[
+          "Unlock growth opportunities and benefits with essential certifications for MSMEs and startups.",
+        ]}
+        image="/cloudsparrow-all-img/certificate.webp"
+      />
       {certificatesData.map((certificate, idx) => {
         return (
           <Card

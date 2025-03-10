@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Header from "../../Common/Header";
 import Overlay from "../../Contact/Overlay";
 
 const grantsData = [
@@ -76,30 +77,14 @@ const grantsData = [
 const Grants = () => {
   return (
     <div className="min-h-screen">
-      <div className="flex gap-4 flex-col-reverse lg:flex-row py-20 bg-gradient-to-b from-gray-800 via-gray-900 to-gray-950 lg:min-h-[74vh]">
-        <div className="flex-6 text-white text-center lg:text-left flex justify-center items-center">
-          <div className="lg:w-[70%] px-6 flex flex-col gap-4">
-            <h1 className="text-3xl lg:text-5xl font-bold">
-              Government Grants
-            </h1>
-            <p>
-              Government grants are financial awards provided by the government
-              to fund specific projects or initiatives.
-            </p>
-            <p>
-              We help you with documentation, online application filing, &
-              coordinate with <br /> authorities to ensure a smooth process.
-            </p>
-          </div>
-        </div>
-        <div className="lg:flex-4 flex justify-center items-center">
-          <img
-            className="size-44"
-            src="/cloudsparrow-all-img/grants.webp"
-            alt="grants"
-          />
-        </div>
-      </div>
+      <Header
+        heading="Government Grants"
+        description={[
+          "Government grants are financial awards provided by the government to fund specific projects or initiatives.",
+          "We help you with documentation, online application filing, & coordinate with authorities to ensure a smooth process.",
+        ]}
+        image="/cloudsparrow-all-img/grants.webp"
+      />
       <div className="bg-blue-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-4 md:px-16 lg:px-40">
         {grantsData.map((data) => {
           return <Card key={data.name} data={data} />;
