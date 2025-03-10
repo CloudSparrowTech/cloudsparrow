@@ -29,15 +29,15 @@ const Auth = ({ setIsLogin }) => {
   };
 
   return (
-    <div className="flex flex-col justify-center gap-10 items-center min-h-screen">
-      <div className="text-start w-md">
+    <div className="flex flex-col justify-center gap-10 items-center min-h-screen mx-4">
+      <div className="text-start w-sm">
         <p className="text-lg font-medium">CloudSparrow</p>
         <h1 className="text-3xl font-medium text-blue-500 my-4">Welcome</h1>
         <p className="text-lg font-medium">
           Login using your registered number...
         </p>
       </div>
-      <div className="w-md">
+      <div className="w-sm">
         <input
           type="number"
           placeholder="Enter Phone Number"

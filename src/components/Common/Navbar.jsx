@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom"; // Make sure to install react-router-dom
+import { Link, useResolvedPath } from "react-router-dom"; // Make sure to install react-router-dom
 import { FaBars, FaTimes, FaUser, FaChevronDown } from "react-icons/fa";
 import jobService from "../../backend/job";
 import authService from "../../backend/auth";
@@ -13,6 +13,7 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
   const dispatch = useDispatch();
+  const path = useResolvedPath();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [openMobileDropdown, setOpenMobileDropdown] = useState({});
   const { status, userData } = useSelector((state) => state.authSlice);
@@ -133,7 +134,10 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white shadow-lg fixed w-full z-50">
+    <nav
+      className="bg-white fixed shadow-lg w-full z-50"
+      style={{ display: path.pathname === "/customer" ? "none" : "" }}
+    >
       <div className="px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Left Side - Logo and Nav Links */}
