@@ -34,7 +34,7 @@ const ITServices = () => {
         description={[
           "Whether you’re starting from scratch or scaling up, we provide the expertise at every stage.",
         ]}
-        image="http://egniol.co.in/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fegniol-services.55277ad1.webp&w=828&q=75"
+        image="/cloudsparrow-all-img/marketing.webp"
       />
       <div className="bg-blue-100 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 py-8 px-4 md:px-16 lg:px-40">
         {SERVICES.map((service) => {
