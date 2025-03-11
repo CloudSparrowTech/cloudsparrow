@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Banner from "./Banner";
 import FAQ from "./FAQ";
-import Testimonials from "./Testimonials";
+import Carousel from "./Carousel";
 import Loader from "../Common/Loader";
+import Testimonials from "./Testimonials";
 import authService from "../../backend/auth";
 import { toast } from "react-toastify";
 
@@ -56,12 +56,12 @@ const HomePage = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
       <motion.div {...fadeInAnimation(0.2)}>
-        <Banner />
+        <Carousel />
       </motion.div>
-      <motion.div {...fadeInAnimation(1.2)}>
+      <motion.div {...fadeInAnimation(0.6)}>
         <Testimonials />
       </motion.div>
-      <motion.div {...fadeInAnimation(1.6)}>
+      <motion.div {...fadeInAnimation(1.0)}>
         <FAQ />
       </motion.div>
     </motion.div>

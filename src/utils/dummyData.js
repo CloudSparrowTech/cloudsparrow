@@ -29,10 +29,73 @@ export const testimonials = [
 ];
 
 export const problems = [
-  { id: 1, text: "Struggling to Engage Your Online Audience?" },
-  { id: 2, text: "Facing Low Conversion Rates on Your Website?" },
-  { id: 3, text: "Unable to Deliver a Seamless User Experience?" },
-  { id: 4, text: "Having Trouble Scaling Your Digital Products?" },
+  {
+    title: "What is a Grant?",
+    content: [
+      "A grant is financial aid provided by the government or organizations.",
+      "It supports businesses, startups, and individuals without repayment.",
+      "Grants help fund innovation, research, and social impact projects.",
+    ],
+  },
+  {
+    title: "What is a Government Loan?",
+    content: [
+      "A government loan is financial assistance provided at lower interest rates.",
+      "It comes with flexible repayment terms to support various industries.",
+      "Commonly used for MSMEs, agriculture, and infrastructure development.",
+    ],
+  },
+  {
+    title: "What is an NBFC?",
+    content: [
+      "A Non-Banking Financial Company (NBFC) provides financial services.",
+      "It offers loans, asset financing, and investments without a banking license.",
+      "NBFCs help bridge the financial gap where traditional banks do not operate.",
+    ],
+  },
+  {
+    title: "What are Certifications for a Startup or Company?",
+    content: [
+      "Certifications ensure compliance with industry standards and regulations.",
+      "Key certifications include Startup India Recognition and ISO Certification.",
+      "Other important certifications: MSME Registration, FSSAI License (for food businesses).",
+    ],
+  },
+  {
+    title: "What is Marketing?",
+    content: [
+      "Marketing helps businesses promote products or services effectively.",
+      "It includes branding, advertising, and digital marketing strategies.",
+      "A strong marketing strategy increases brand awareness and customer engagement.",
+    ],
+  },
+  {
+    title: "What is Legal Assistance?",
+    content: [
+      "Legal assistance provides expert guidance on business compliance.",
+      "It includes contract drafting, intellectual property protection, and dispute resolution.",
+      "Ensures businesses stay legally protected and avoid risks.",
+    ],
+  },
+  {
+    title: "Why Us?",
+    content: [
+      "We simplify the process of securing grants, loans, and certifications.",
+      "Our expert team ensures smooth legal compliance and financial assistance.",
+      "We offer tailored solutions to help businesses grow effectively.",
+    ],
+  },
+  {
+    title: "What We Offer",
+    content: [
+      "End-to-end assistance in securing grants and government loans.",
+      "Guidance on choosing the right NBFC for financing solutions.",
+      "Support in obtaining essential certifications for startups and businesses.",
+      "Strategic marketing services to boost brand visibility and sales.",
+      "Comprehensive legal support to ensure compliance and risk mitigation.",
+      "Customized solutions tailored for business growth and sustainability.",
+    ],
+  },
 ];
 
 export const SERVICES = [
@@ -170,61 +233,26 @@ export const CARDS = [
   },
 ];
 
-export const data = [
+export const carouselData = [
   {
-    title: "Healthcare Software Solutions",
-    icon: "/cloudsparrow-all-img/heart.png",
+    title: "Certifications for Business Growth",
+    description:
+      "Gain industry-leading certifications to build credibility and trust for your startup. Stay ahead with expert validation.",
+    buttonText: "Get Certified",
+    image: "/cloudsparrow-all-img/certificationBanner.webp",
   },
   {
-    title: "Cloud Infrastructure & Security",
-    icon: "/cloudsparrow-all-img/cloudbulb.png",
+    title: "Secure Funding for Your Startup",
+    description:
+      "Access funding opportunities and connect with investors to fuel your startup’s success and scale efficiently.",
+    buttonText: "Explore Funding",
+    image: "/cloudsparrow-all-img/fundingBanner.webp",
   },
   {
-    title: "Custom e-Commerce Development",
-    icon: "/cloudsparrow-all-img/bucket.png",
-  },
-  {
-    title: "Sports Analytics & Management",
-    icon: "/cloudsparrow-all-img/balls.png",
-  },
-  {
-    title: "Travel & Hospitality Tech",
-    icon: "/cloudsparrow-all-img/earth.png",
-  },
-  {
-    title: "Insurance Management Solutions",
-    icon: "/cloudsparrow-all-img/insurance.png",
-  },
-  {
-    title: "Real Estate Digital Platforms",
-    icon: "/cloudsparrow-all-img/realestate.png",
-  },
-  {
-    title: "Marketing Automation & Ads",
-    icon: "/cloudsparrow-all-img/marketing.png",
-  },
-  {
-    title: "Automobile Tech & IoT",
-    icon: "/cloudsparrow-all-img/automobile.png",
-  },
-  {
-    title: "Supply Chain & Logistics Tech",
-    icon: "/cloudsparrow-all-img/logistics.png",
-  },
-  {
-    title: "E-Learning & Non-Profit Solutions",
-    icon: "/cloudsparrow-all-img/education.png",
-  },
-  {
-    title: "Smart Manufacturing & Automation",
-    icon: "/cloudsparrow-all-img/manufacturing.png",
-  },
-  {
-    title: "Media Streaming & Content Platforms",
-    icon: "/cloudsparrow-all-img/media.png",
-  },
-  {
-    title: "AI, Tech Consulting & Innovation",
-    icon: "/cloudsparrow-all-img/technology.png",
+    title: "Boost Your Brand with Marketing",
+    description:
+      "Leverage powerful marketing strategies to position your startup for success and attract the right customers.",
+    buttonText: "Start Marketing",
+    image: "/cloudsparrow-all-img/marketingBanner.webp",
   },
 ];
