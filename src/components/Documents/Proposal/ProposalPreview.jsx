@@ -65,10 +65,8 @@ const Preview = ({ data, user, title, close }) => {
     body { 
       font-family: Arial, sans-serif; 
       background-color: #f8f9fa;
-      width: 210mm; 
-      height: 297mm;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 0;
+      padding: 0;
     }
 
     header { 
@@ -311,7 +309,7 @@ const Preview = ({ data, user, title, close }) => {
 </html>`;
 
   return (
-    <div className="absolute inset-0 container mx-auto p-4 bg-white">
+    <div className="absolute left-0 top-14 container mx-auto p-4 bg-white">
       <div className="flex justify-end mb-4 gap-2">
         <button
           onClick={printPage}

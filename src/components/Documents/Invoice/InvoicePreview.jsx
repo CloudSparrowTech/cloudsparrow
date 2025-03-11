@@ -235,7 +235,7 @@ const Preview = ({ data, user, close, totalAmount }) => {
 `;
 
   return (
-    <div className="absolute inset-0 container mx-auto p-4 bg-white">
+    <div className="absolute left-0 top-14 container mx-auto p-4 bg-white">
       <div className="flex fixed right-10 justify-end mb-4 gap-2">
         <button
           onClick={printPage}
