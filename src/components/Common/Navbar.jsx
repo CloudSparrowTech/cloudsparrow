@@ -208,9 +208,13 @@ const Navbar = () => {
             </Link>
             {status && (
               <div className="relative group">
-                <button className="flex items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
-                  <FaUser className="mr-2" />
+                <button className="flex overflow-hidden items-center text-gray-700 hover:text-blue-600 px-3 py-2 text-sm font-medium">
                   {userData?.name}
+                  <img
+                    src={userData?.avatar}
+                    alt={userData?.name}
+                    className="rounded-full size-8 ml-2"
+                  />
                 </button>
                 <div className="overflow-hidden absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
                   {userDropdown.map((item) => (
@@ -339,8 +343,12 @@ const Navbar = () => {
                   className="flex items-center justify-between text-gray-700 px-3 py-2 text-sm font-medium cursor-pointer hover:text-blue-600"
                   onClick={() => toggleMobileDropdown("User")}
                 >
-                  <div className="flex items-center">
-                    <FaUser className="mr-2" />
+                  <div className="flex overflow-hidden items-center">
+                    <img
+                      src={userData?.avatar}
+                      alt={userData?.name}
+                      className="rounded-full size-8 mr-2"
+                    />
                     {userData?.name}
                   </div>
                   <FaChevronDown />

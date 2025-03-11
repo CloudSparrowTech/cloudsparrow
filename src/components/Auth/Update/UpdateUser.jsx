@@ -6,11 +6,11 @@ import UpdatePassword from "./UpdatePassword";
 function UpdateUser() {
   const [current, setCurrent] = useState(0);
 
-  const pages = [<UpdateInfo/>, <UpdateEmail/>, <UpdatePassword/>];
+  const pages = [<UpdateInfo />, <UpdateEmail />, <UpdatePassword />];
 
   return (
     <div className="lg:h-screen flex items-center justify-center px-4 py-24 lg:py-0 lg:px-0">
-      <div className="bg-gray-700 rounded-2xl lg:mt-10 lg:p-10 p-6 text-white lg:h-[80vh] w-7xl">
+      <div className="bg-gray-700 rounded-2xl lg:mt-10 lg:p-10 p-6 text-white w-7xl">
         <div className="flex">
           <button
             disabled={current === 0}
@@ -34,7 +34,7 @@ function UpdateUser() {
             Update Password
           </button>
         </div>
-        <div className="flex lg:h-[60vh] h-[30vh] lg:border rounded-md">
+        <div className="flex lg:border rounded-md">
           <div className="hidden lg:flex items-center justify-center border-r-2 w-full h-full px-10 py-4">
             <img
               src="/cloudsparrow-all-img/recoverpass.png"

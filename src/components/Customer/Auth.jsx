@@ -11,7 +11,7 @@ const Auth = ({ setIsLogin }) => {
     try {
       const session = await authService.sendOTP(phone);
       setSessionId(session.userId);
-      toast("OTP sent!");
+      toast("OTP sent on mail!");
     } catch (err) {
       toast(err.message);
     }
